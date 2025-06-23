@@ -15,7 +15,6 @@ font-size: 40px;
     }
     #languages button {
         padding:10px 20px;
-        font-weight:bold;
         margin: 10px 20px;
     }
     .box {
@@ -28,11 +27,7 @@ font-size: 40px;
       width: 90vw;
     }
 hr {
- transform:translateY(3em); 
  margin:20px 0; 
-} 
-hr + lable {
- transform:translateY(3em); 
 } 
     input, button {
       padding: 10px;
