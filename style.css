@@ -31,6 +31,9 @@ hr {
  transform:translateY(3em); 
  margin:20px 0; 
 } 
+hr + lable {
+ transform:translateY(3em); 
+} 
     input, button {
       padding: 10px;
       margin: 20px 0;
