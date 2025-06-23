@@ -46,8 +46,8 @@ hr {
         color:white;
         margin: 0 0 20px;
     }
-button:hiver {
- background-color:#48f; 
+button:hover {
+ background-color:#37f; 
 } 
     label { font-weight: bold; }
     p {
