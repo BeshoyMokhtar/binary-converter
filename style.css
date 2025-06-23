@@ -8,7 +8,7 @@
     #languages {
         display:flex;
      justify-content: center; 
-        width:100%; 
+        width:90vw; 
     }
     #languages button {
         display:inline;
@@ -16,6 +16,8 @@
         font-weight:bold;
         font-size:20px;
         margin: 10px 20px;
+width:30%; 
+
     }
     .box {
       background: white;
@@ -23,8 +25,8 @@
       border-radius: 12px;
       box-shadow: 0 0 10px #ccc;
       margin: 5px auto;
-      height: 90vh; 
-      width: 90%;
+      height: 40vh; 
+      width: 90vw;
     }
     input, button {
       padding: 10px;
