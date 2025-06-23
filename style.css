@@ -27,7 +27,8 @@
       width: 90vw;
     }
 hr {
- margin-top:80px; 
+ transform:trnslateY(120px); 
+ margin:20px 0; 
 } 
     input, button {
       padding: 10px;
