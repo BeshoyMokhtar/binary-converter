@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Binary ⇄ Unicode Text Converter</title>
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+</head>
+<body>
+<div id="languages">
+    <button id="en" onclick="window.location.href ='en.html'">En</button>
+    <button id="ar" onclick="window.location.href ='index.html'">Ar</button>
+</div>
+  <div class="box">
+    <label for="binaryInput">🔢 تحويل لغة الكمبيوتر لكلام</label>
+    <input type="text" id="binaryInput" placeholder="0000000001001000 مثلًا: أكتب ">
+    <button onclick="convertBinaryToText()">أضغط هنا</button>
+    <p id="charResult"></p>
+    <hr>
+
+    <label for="charInput">🔠 تحويل الكلام للغة الكمبيوتر</label>
+    <input type="text" id="charInput" placeholder="مثلًا: أكتب مرحبًا">
+    <button onclick="convertTextToBinary()">أضغط هنا</button>
+    <p id="binaryResult"></p>
+  </div>
+  <script>
+      function convertBinaryToText() {
+      const binary = document.getElementById('binaryInput').value.trim().replace(/\s+/g, '');
+      if (!/^[01]+$/.test(binary)) {
+        document.getElementById('charResult').textContent = "يجب الكتابة بلغة الكمبيوتر (0 أو 1)";
+               document.getElementById('charResult').classList.add("warning")
+        return;
+      }
+      if (binary.length % 16 !== 0) {
+        document.getElementById('charResult').textContent = "يجب كتابة عدد أرقام يقبل القسمة على 16";
+        document.getElementById('charResult').classList.add("warning")
+        return;
+      }
+      if (binary.length % 16 === 0 && /^[01]+$/.test(binary)) {
+          document.getElementById('charResult').classList.remove("warning");
+      }
+      let text = '';
+      for (let i = 0; i < binary.length; i += 16) {
+        const segment = binary.slice(i, i + 16);
+        const charCode = parseInt(segment, 2);
+        text += String.fromCharCode(charCode);
+      }
+
+      document.getElementById('charResult').textContent = text;
+    }
+
+    function convertTextToBinary() {
+      const text = document.getElementById('charInput').value;
+      if (!text) {
+        document.getElementById('binaryResult').textContent = "لا يجب أن يكون هذا الحقل فارغًا";       document.getElementById('binaryResult').classList.add("warning");
+        
+        return;
+      }
+      if (text) {      document.getElementById('binaryResult').classList.remove("warning");
+      }
+      let binaryResult = '';
+      for (let i = 0; i < text.length; i++) {
+        const binary = text.charCodeAt(i).toString(2).padStart(16, '0');
+        binaryResult += binary + " ";
+      }   document.getElementById('binaryResult').textContent = binaryResult;
+    }
+  </script>
+</body>
+</html>
