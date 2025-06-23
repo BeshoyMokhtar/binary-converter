@@ -46,6 +46,9 @@ hr {
         color:white;
         margin: 0 0 20px;
     }
+button:hiver {
+ background-color:#48f; 
+} 
     label { font-weight: bold; }
     p {
       word-break: break-word;
