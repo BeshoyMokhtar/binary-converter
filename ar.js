@@ -35,6 +35,6 @@
       let binaryResult = '';
       for (let i = 0; i < text.length; i++) {
         const binary = text.charCodeAt(i).toString(2).padStart(16, '0');
-        binaryResult += binary + " ";
+        binaryResult += binary + "\n";
       }   document.getElementById('binaryResult').textContent = binaryResult;
     }
