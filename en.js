@@ -36,6 +36,6 @@ function convertBinaryToText() {
       let binaryResult = '';
       for (let i = 0; i < text.length; i++) {
         const binary = text.charCodeAt(i).toString(2).padStart(16, '0');
-        binaryResult += binary + "\n";
+        binaryResult += binary + "<br>";
       }     document.getElementById('binaryResult').textContent = binaryResult;
     }
