@@ -8,7 +8,7 @@
     #languages {
         display:flex;
      justify-content: center; 
-        width:40vw; 
+        width:80vw; 
      margin: 200px 0 30px; 
     }
     #languages button {
