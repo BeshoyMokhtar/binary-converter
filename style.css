@@ -29,7 +29,7 @@ font-size: 40px;
       width: 90vw;
     }
 hr {
- transform:trnslateY(120px); 
+ transform:translateY(3em); 
  margin:20px 0; 
 } 
     input, button {
