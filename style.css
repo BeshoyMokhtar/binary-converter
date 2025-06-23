@@ -1,7 +1,7 @@
 * { box-sizing: border-box;
  color:#59f;
 font-weight:bold; 
-font-size: 40px; 
+font-size: 30px; 
   }
     body {
       font-family: Arial, sans-serif;
@@ -44,6 +44,7 @@ hr {
         background-color:#59f;
         color:white;
         margin: 0 0 20px;
+     font-size:40px; 
     }
 button:hover {
  background-color:#37d; 
